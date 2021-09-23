@@ -6,7 +6,7 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".DetailActivity">
+        tools:context=".DetailsActivity">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -24,15 +24,18 @@
 
         <include
             android:id="@+id/content_detail"
-            layout="@layout/content_detail" />
+            layout="@layout/content_details" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_margin="@dimen/fab_margin"
-            app:srcCompat="@android:drawable/ic_dialog_email" />
+            android:text="@string/close"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/colorPrimary"
+            app:icon="@drawable/ic_close" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

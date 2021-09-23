@@ -8,7 +8,7 @@ plugins {
 android {
     compileSdkVersion 31
     defaultConfig {
-        applicationId "com.udacity"
+        applicationId "com.udacity.loadapp"
         minSdkVersion 24
         targetSdkVersion 31
         versionCode 1

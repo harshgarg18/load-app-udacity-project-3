@@ -11,15 +11,67 @@
         tools:context=".MainActivity"
         tools:showIn="@layout/activity_main">
 
-        <com.udacity.LoadingButton
-            android:id="@+id/custom_button"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_margin="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <ImageView
+            android:id="@+id/download_icon"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/colorPrimaryDark"
+            android:contentDescription="@string/download_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_cloud_24" />
+
+        <RadioGroup
+            android:layout_margin="20dp"
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/download_icon">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/glide_radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:lineSpacingMultiplier="1.5"
+                android:text="@string/glide_download_text" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/udacity_radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:lineSpacingMultiplier="1.5"
+                android:text="@string/udacity_download_text" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/retrofit_radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:lineSpacingMultiplier="1.5"
+                android:text="@string/retrofit_download_text" />
+
+        </RadioGroup>
+
+        <com.udacity.loadapp.ui.LoadingButton
+            android:id="@+id/custom_button"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:layout_marginVertical="36dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:animationArcColor="@color/colorAccent"
+            app:animationLoadingColor="@color/loadingColor"
+            app:buttonBackgroundColor="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
